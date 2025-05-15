@@ -15,4 +15,7 @@ app.listen(port, () => {
 app.get("/test", (req, res) => {
   console.log(req.params);
   res.send("Test endpoint reached");
+  res.json({
+    msg: "Hiiiii world"
+  })
 });
