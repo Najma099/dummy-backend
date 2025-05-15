@@ -12,6 +12,9 @@ app.listen(port, () => {
   console.log(`Backend service is running on : http://localhost:${port}/`);
 });
 
+app.get("/", (req, res) => {
+  res.send("Home page");
+})
 app.get("/test", (req, res) => {
   console.log(req.params);
   res.send("Test endpoint reached");
